@@ -1,4 +1,4 @@
-import React, { createElement } from "react";
+import React, { createElement, useState } from "react";
 
 function CheckWinCondition(content) {
     let check = [];
@@ -24,21 +24,23 @@ function CheckWinCondition(content) {
 }
 
 function TicTacToe() {
-    let content = [[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]];
-    let symbol = "O";
+    let [content, setContent] = useState([[" ", " ", " "], [" ", " ", " "], [" ", " ", " "]]);
+    let [symbol, setSymbol] = useState("O");
     return (
-        <div id="r">
+        <div>
             {content.map((row, rowIndex) => (
                 <div key={rowIndex}>
                     {row.map((element, columnIndex) => (
-                        <button id={rowIndex.toString() + ":" + columnIndex.toString()} onClick={() => {
-                            if (document.getElementById(rowIndex.toString() + ":" + columnIndex.toString()).innerHTML == " ") {
-                                document.getElementById(rowIndex.toString() + ":" + columnIndex.toString()).innerHTML = content[rowIndex][columnIndex] = symbol;
-                                if (symbol == "O") symbol = "X";
-                                else symbol = "O";
+                        <button onClick={() => {
+                            if (element === " ") {
+                                const newContent = [...content];
+                                newContent[rowIndex][columnIndex] = symbol;
+                                setContent(newContent);
+                                if (symbol == "O") setSymbol("X");
+                                else setSymbol("O");
                             }
                             let winner = CheckWinCondition(content);
-                            if (winner != " ") document.getElementById("winner").innerHTML = "The winner is " + winner;
+                            if (winner !== " ") document.getElementById("winner").innerHTML = "The winner is " + winner;
                         }}>{element}</button>
                     ))}
 
