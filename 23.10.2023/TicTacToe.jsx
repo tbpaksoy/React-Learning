@@ -31,7 +31,7 @@ function TicTacToe() {
             {content.map((row, rowIndex) => (
                 <div key={rowIndex}>
                     {row.map((element, columnIndex) => (
-                        <button onClick={() => {
+                        <button style={{ width: '50px', height: '50px' }} onClick={() => {
                             if (element === " ") {
                                 const newContent = [...content];
                                 newContent[rowIndex][columnIndex] = symbol;
@@ -43,11 +43,8 @@ function TicTacToe() {
                             if (winner !== " ") document.getElementById("winner").innerHTML = "The winner is " + winner;
                         }}>{element}</button>
                     ))}
-
                 </div>
-
             ))
-
             }
             <div id="winner"></div>
         </div>
