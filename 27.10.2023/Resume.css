@@ -11,6 +11,13 @@
     bottom: 100px;
 }
 
+.link-button {
+    width: 150px;
+    height: 150px;
+    top: 400px;
+    position: absolute;
+}
+
 .summary {
     width: 60vw;
     height: 60vh;
