@@ -12,10 +12,9 @@
 }
 
 .link-button {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     top: 375px;
-    position: absolute;
     border-radius: 15px;
 }
 
@@ -30,4 +29,9 @@
     inset: 20px;
     text-indent: 20px;
     font-size: 20px;
+}
+
+.summary-container {
+    flex-direction: row;
+    display: flex;
 }
