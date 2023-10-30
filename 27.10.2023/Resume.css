@@ -1,0 +1,25 @@
+.resume {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background-color: #FAEDCA;
+}
+
+.infobox-at-down {
+    width: 100vw;
+    height: 20vh;
+    bottom: 100px;
+}
+
+.summary {
+    width: 60vw;
+    height: 60vh;
+    align-self: center;
+    margin: auto;
+    background-color: #FE5D26;
+    color: #F2C078;
+    border-radius: 25px;
+    inset: 20px;
+    text-indent: 20px;
+    font-size: 20px;
+}
