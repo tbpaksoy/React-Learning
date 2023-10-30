@@ -14,8 +14,9 @@
 .link-button {
     width: 150px;
     height: 150px;
-    top: 400px;
+    top: 375px;
     position: absolute;
+    border-radius: 15px;
 }
 
 .summary {
