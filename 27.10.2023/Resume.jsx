@@ -10,10 +10,10 @@ function Summary({ name, surname }) {
     </div>
 }
 function InfoBoxAtDown() {
-    return <div style={{ width: "100vw", height: "20vh", alignSelf: "down", bottom: 100 }}></div>
+    return <div className="infobox-at-down" ></div>
 }
 function LinkButton({ link, image }) {
-    return <a href={link} style={{ position: "relative", height: 150, width: 150 }}><img src={image} className="link-button"></img></a>
+    return <a href={link} className="summary-item"><img src={image} className="link-button"></img></a>
 
 }
 function Resume({ name, surname }) {

@@ -12,9 +12,10 @@
 }
 
 .link-button {
-    width: 100px;
-    height: 100px;
-    top: 375px;
+    width: 150px;
+    height: 150px;
+    bottom: 0px;
+    position: absolute;
     border-radius: 15px;
 }
 
@@ -32,6 +33,19 @@
 }
 
 .summary-container {
-    flex-direction: row;
+    width: 60vw;
+    height: 60vh;
     display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.summary-item {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    bottom: -350px;
 }
